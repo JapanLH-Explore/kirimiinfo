@@ -1,0 +1,125 @@
+/* ことばの物語 — the pages the App Store links to.
+
+   Deliberately plain and deliberately self-contained: no fonts, no scripts, no
+   analytics, nothing fetched from anywhere. A privacy policy that phones a
+   third party on load is its own small joke, and this one promises it does not
+   happen, so the page had better not do it. */
+
+:root {
+  --paper: #f4efe4;
+  --ink:   #2c2418;
+  --soft:  #5f4d39;
+  --faint: #8a7d63;
+  --accent:#8a3b3b;
+  --rule:  rgba(138, 59, 59, 0.22);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #16181f;
+    --ink:   #e6e1d5;
+    --soft:  #b3ab9a;
+    --faint: #8a8375;
+    --accent:#d98a6a;
+    --rule:  rgba(217, 138, 106, 0.24);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 0 20px 72px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP",
+               "Yu Gothic", system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+main { max-width: 40rem; margin: 0 auto; }
+
+header {
+  border-bottom: 1px solid var(--rule);
+  padding: 40px 0 18px;
+  margin-bottom: 30px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  color: var(--accent);
+  margin: 0 0 10px;
+}
+
+h1 {
+  font-family: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-size: 27px;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  color: var(--accent);
+  text-transform: uppercase;
+  border-top: 1px solid var(--rule);
+  padding-top: 26px;
+  margin: 44px 0 18px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 16.5px;
+  margin: 30px 0 6px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+p { margin: 0 0 16px; color: var(--soft); }
+p.lead { color: var(--ink); font-size: 17px; }
+
+ul { margin: 0 0 16px; padding-left: 1.25em; color: var(--soft); }
+li { margin-bottom: 7px; }
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+
+/* the two big links on the front page */
+.card {
+  display: block;
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  padding: 17px 18px;
+  margin-bottom: 13px;
+  text-decoration: none;
+  color: var(--accent);
+  font-size: 17px;
+  letter-spacing: 0.06em;
+}
+.card:hover { background: rgba(138, 59, 59, 0.06); }
+/* the two languages stack rather than sharing a line: "プライバシーポリシー"
+   set beside an English title wraps mid-word on a narrow phone, and a lone
+   ー on the second line looks like a mistake */
+.card b { display: block; font-weight: 600; }
+.card i { display: block; font-style: normal; font-size: 14.5px; margin-top: 1px; }
+.card span { display: block; color: var(--faint); font-size: 13px; letter-spacing: 0; margin-top: 6px; }
+
+.langswitch { font-size: 13px; letter-spacing: 0.06em; color: var(--faint); margin: 0 0 6px; }
+
+.updated { font-size: 13px; color: var(--faint); margin: 0 0 30px; }
+
+footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 54px;
+  padding-top: 18px;
+  font-size: 13px;
+  color: var(--faint);
+}
+footer a { color: var(--faint); }
